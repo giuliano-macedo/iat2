@@ -17,7 +17,7 @@ plt.rc('text', usetex=True)
 xs=np.array(range(1,args.no_it+1))
 ans=[]
 for alpha in np.arange(a,b+c,c):
-	model=LinearRegression(*data,alpha=alpha,normalize=True)
+	model=LinearRegression(*data.T,alpha=alpha,normalize=True)
 	errs=np.zeros((args.no_it))
 	for i in range(args.no_it):
 		thetao,j=next(model)
